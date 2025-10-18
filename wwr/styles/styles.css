@@ -1,7 +1,31 @@
+/* --- Change your Body and headline fonts --- */
+/* Example @import. Replace with your actual font choices if different. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
 }
+
+/* --- Simple Reset, Adjusting font sizes, and Change your Body font --- */
+body {
+    background-color: #fcfbfb;
+    /* Change your Body font: Open Sans + two back-ups */
+    font-family: 'Open Sans', Arial, sans-serif;
+    /* Adjusting font sizes: font-size of 22px */
+    font-size: 22px;
+    /* Simple Reset: 0 padding and margin */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Simple Reset for h2 --- */
+h2 {
+    /* Simple Reset: 0 margin */
+    margin: 0;
+}
+
+/* Existing styles for alignment */
 nav a,
 #hero-msg h1,
 #hero-msg h4,
@@ -9,15 +33,17 @@ nav a,
 main section {
     text-align: center;
 }
+
+/* Existing styles for background and colors */
 #background {
     height: 725px;
+    background-color: #e0e0e0;
 }
-body { background-color: #fcfbfb; }
+
 header { background-color: rgba(20,30,13, .7); }
 nav a:hover { background-color: black; }
 .book, .join { background-color: #a2c523; }
 .book:hover, .join:hover { background-color: #85a914; }
-#background { background-color: #e0e0e0; }
 .msg { background-color: #f5f5f5; }
 footer { background-color: #2a2a2a; }
 
@@ -45,4 +71,98 @@ footer p a:hover {
 
 footer p {
     font-size: 1.2em;
+}
+
+/* --- Change your headline font, Adjusting font sizes, and Adding Margins (Consolidated) --- */
+.home-title {
+    /* Change your headline font: Montserrat + two back-ups */
+    font-family: 'Montserrat', Georgia, serif;
+    /* Adjusting font sizes: 2em */
+    font-size: 2em;
+    /* Adding Margins: margin-top: 10px */
+    margin-top: 10px;
+}
+
+/* --- Adjusting font sizes and Line Height, Adding Padding (Consolidated) --- */
+.msg {
+    /* Line Height: 1.5em */
+    line-height: 1.5em;
+    /* Adding Padding: padding: 35px */
+    padding: 35px;
+    /* Keeping existing background color from prior uploads */
+    background-color: #6f7364; 
+}
+
+/* --- Adjusting font sizes and Adding Padding (Consolidated) --- */
+.book, .join {
+    /* Adjusting font sizes: 18px */
+    font-size: 18px;
+    /* Adding Padding: padding: 15px 30px */
+    padding: 15px 30px;
+    /* Adding Margins: margin-top: 50px */
+    margin-top: 50px;
+    /* Adding borders, border radius: border-radius: 5px */
+    border-radius: 5px;
+    
+    /* Retaining existing colors */
+    background-color: #d9c2a3; /* Example color from prompt */
+    color: black;
+}
+
+/* --- Adding Margins (New Rule-Set) --- */
+.rivers-card, .camping-card, .rapids-card {
+    /* Adding Margins: margin: 200px 0 */
+    margin: 200px 0;
+}
+
+/* --- Adding Padding --- */
+#logo_link {
+    /* Adding Padding: padding-top: 5px */
+    padding-top: 5px;
+}
+
+/* --- Adding Padding (Consolidated) --- */
+nav a {
+    /* Adding Padding: padding: 35px */
+    padding: 35px;
+}
+
+/* --- Adding Padding --- */
+.icon {
+    /* Adding Padding: padding-top: 10px */
+    padding-top: 10px;
+}
+
+/* --- Adjusting font sizes and Adding Padding (Consolidated) --- */
+.msg p {
+    /* Adjusting font sizes: .8em */
+    font-size: .8em;
+    /* Adding Padding: padding-bottom: 15px */
+    padding-bottom: 15px;
+}
+
+/* --- Adding Padding and Adding Margins (Consolidated) --- */
+footer {
+    /* Adding Padding: padding: 25px 50px */
+    padding: 25px 50px;
+    /* Adding Margins: margin-top: 200px */
+    margin-top: 200px;
+}
+
+/* --- Adding Padding (New Rule-Set) --- */
+footer .social img {
+    /* Adding Padding: padding-top: 15px */
+    padding-top: 15px;
+}
+
+/* --- Adding borders, border radius (New Rule-Set) --- */
+.card-img {
+    /* Adding borders: border: 10px solid #black (using a placeholder color) */
+    border: 10px solid #d9c2a3; /* Using the recommended color from your previous example */
+}
+
+/* --- Adding borders, border radius (New Rule-Set) --- */
+main section img {
+    /* box-sizing: border-box */
+    box-sizing: border-box;
 }
