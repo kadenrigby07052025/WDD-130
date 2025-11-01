@@ -1,0 +1,84 @@
+/* --- Simplified Button & Form CSS for Smaller Website --- */
+
+/* 1. Root Variables (Optional, but good for easy changes) */
+:root {
+    --project-button-padding-y: 10px;
+    --project-button-padding-x: 16px;
+    --project-button-stroke: 2px; /* Border thickness */
+    --project-primary-color: #007bff; /* Example Primary Color */
+    --project-secondary-color: #6c757d; /* Example Secondary Color */
+}
+
+/* ----------------------------------
+ * 2. Button Block Base & Alignment
+ * (Use '.button-container' to wrap your buttons)
+ * ----------------------------------*/
+.button-container {
+    text-align: center; /* Default centering */
+    display: flex; /* For alignment control */
+    gap: 10px; /* Space between multiple buttons */
+    justify-content: center; /* Center horizontally by default */
+}
+
+/* Alignment utilities (Optional - use on .button-container) */
+.button-container.align-left {
+    justify-content: flex-start;
+}
+.button-container.align-right {
+    justify-content: flex-end;
+}
+
+/* ----------------------------------
+ * 3. Base Button Styling
+ * (Applies to all buttons)
+ * ----------------------------------*/
+.button-element {
+    display: inline-block;
+    cursor: pointer;
+    line-height: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    padding: var(--project-button-padding-y) var(--project-button-padding-x);
+    border-style: solid;
+    transition: opacity 0.1s linear; /* Base hover animation */
+}
+
+/* Hover Effect (Keeps the original's opacity reduction) */
+.button-element:hover {
+    opacity: 0.8;
+}
+
+/* ----------------------------------
+ * 4. Primary Button (Solid Style)
+ * (Add the 'style-primary' class to your main buttons)
+ * ----------------------------------*/
+.button-element.style-primary {
+    color: white; /* White text on solid background */
+    background-color: var(--project-primary-color);
+    border-width: var(--project-button-stroke);
+    border-color: var(--project-primary-color);
+    border-radius: 4px; /* Standard rounded corner */
+}
+
+/* ----------------------------------
+ * 5. Secondary Button (Outline Style)
+ * (Add the 'style-secondary' class for a secondary button)
+ * ----------------------------------*/
+.button-element.style-secondary {
+    color: var(--project-secondary-color); /* Secondary color for text/border */
+    background: transparent; /* Transparent background */
+    border-width: var(--project-button-stroke);
+    border-color: var(--project-secondary-color);
+    border-radius: 4px;
+    transition: background-color 0.1s linear, color 0.1s linear; /* Outline animation */
+}
+
+/* Secondary Hover (Fill the button with its color on hover) */
+.button-element.style-secondary:hover {
+    color: white;
+    background-color: var(--project-secondary-color);
+    opacity: 1; /* Override base hover to make it feel solid */
+}
