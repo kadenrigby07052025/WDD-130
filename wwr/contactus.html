@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <style>
+        /* ======== FORM STYLES FROM MDN + CLASS ACTIVITY ======== */
+        form {
+            margin: 2rem auto;
+            max-width: 600px;
+            padding: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        input, textarea, select, button {
+            width: 100%;
+            padding: .75rem;
+            margin-top: .5rem;
+            border-radius: 6px;
+            border: 1px solid #aaa;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            margin-top: 1.5rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        /* ======== FEEDBACK MESSAGE (From Activity Instructions) ======== */
+        #feedback {
+            background-color: antiquewhite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: .5em;
+            display: none;
+        }
+
+        .moveDown {
+            margin-top: 3em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>White Water Rafting Co.</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rivers.html">Rivers</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- FEEDBACK MESSAGE -->
+        <div id="feedback"></div>
+
+        <!-- ======== FORM ======== -->
+        <form>
+            <h2>Contact Us</h2>
+
+            <label for="user_name">Name:</label>
+            <input type="text" id="user_name" name="user_name" required>
+
+            <label for="user_email">Email:</label>
+            <input type="email" id="user_email" name="user_email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="user_message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>© 2024 White Water Rafting Co. | WDD 130</p>
+    </footer>
+
+    <!-- ======== JAVASCRIPT FROM THE ASSIGNMENT ======== -->
+    <script>
+        const feedbackElement = document.getElementById('feedback');
+        const formElement = document.forms[0];
+
+        formElement.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            feedbackElement.innerHTML =
+                'Hello ' +
+                formElement.user_name.value +
+                '! Thank you for your message. We will get back with you as soon as possible!';
+
+            feedbackElement.style.display = "block";
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+
+</body>
+</html>
