@@ -1,4 +1,6 @@
-/* ----- Global Reset ----- */
+/* =========================================================
+   GLOBAL STYLE + RESET 
+=========================================================*/
 * {
   margin: 0;
   padding: 0;
@@ -6,159 +8,202 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background: #f8f8f8;
-  color: #222;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  background: #121212;
+  color: #e3e3e3;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  padding: 20px;
 }
 
-/* ----- Header ----- */
+/* =========================================================
+   HEADER + FOOTER
+=========================================================*/
 header {
-  background: #111;
-  color: #fff;
-  padding: 20px;
+  background: #181818;
+  padding: 25px;
   text-align: center;
-  margin-bottom: 20px;
+  border-bottom: 3px solid #353535;
 }
 
-/* ----- Footer ----- */
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 footer {
-  background: #222;
-  color: #eee;
-  padding: 20px;
+  background: #181818;
+  color: #aaa;
+  padding: 25px;
   text-align: center;
   margin-top: 40px;
+  border-top: 3px solid #353535;
 }
 
 footer a {
-  color: #9cf;
+  color: #66aaff;
   text-decoration: none;
 }
+footer a:hover { text-decoration: underline; }
 
-/* ----- Buttons / Links ----- */
+/* BUTTONS */
 .button {
   display: inline-block;
-  padding: 12px 20px;
-  background: #333;
+  padding: 14px 22px;
+  background: #2980ff;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
-  margin: 10px;
+  border-radius: 6px;
   font-weight: bold;
+  transition: background .3s, transform .2s;
 }
-
 .button:hover {
-  background: #555;
+  background: #1468d4;
+  transform: scale(1.05);
 }
 
-/* ----- Hero Row (Homepage) ----- */
+/* =========================================================
+   HOME PAGE — HERO + GRID
+=========================================================*/
 .hero-row {
   display: flex;
   gap: 20px;
   justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.hero-row img {
-  width: 100%;
-  border-radius: 5px;
+  margin: 30px 0;
 }
 
 .hero-row figure {
   width: 32%;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform .25s ease;
 }
+.hero-row figure:hover { transform: scale(1.03); }
+.hero-row img { width: 100%; border-radius: 6px; }
 
-/* ----- Headline Section ----- */
 .headline-section {
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  margin-bottom: 30px;
+  background: #1b1b1b;
+  padding: 30px;
+  border-radius: 6px;
+  margin-bottom: 35px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.35);
 }
-
 .headline-section h2 {
+  color: #71b7ff;
   margin-bottom: 10px;
+  font-size: 1.6rem;
 }
-
 .headline-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 25px;
   margin-top: 20px;
 }
-
 .headline-card {
-  background: #eee;
-  padding: 15px;
-  border-radius: 5px;
+  background: #232323;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.35);
+  transition: background .3s;
 }
+.headline-card:hover { background: #2e2e2e; }
 
-/* ----- Feature Row (Battlefield Page) ----- */
+/* =========================================================
+   BATTLEFIELD 6 REVIEW PAGE
+=========================================================*/
 .feature-row {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
 }
 
 .feature-image img {
   width: 100%;
-  border-radius: 5px;
-}
-
-.feature-image {
-  flex: 1;
+  border: 3px solid #000;
 }
 
 .feature-text {
-  flex: 1;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
+  background: #ffffff;
+  color: #111;
+  padding: 25px;
+  border: 3px solid #000;
+  font-size: 1.2rem;
 }
 
-/* ----- Retailer Table ----- */
+/* Retailers Block */
+.retailers {
+  background: #fff;
+  color: #111;
+  margin-top: 35px;
+  padding: 25px;
+  text-align: center;
+  font-size: 1.3rem;
+  border: 3px solid #000;
+}
+
 table {
   width: 100%;
   background: #fff;
   border-collapse: collapse;
   margin-top: 20px;
-  border-radius: 5px;
+  border-radius: 6px;
   overflow: hidden;
 }
+th, td { padding: 14px; border: 1px solid #333; }
+th { background: #2980ff; color: #fff; }
 
-th, td {
-  padding: 12px;
-  border: 1px solid #ccc;
-}
-
-th {
-  background: #333;
-  color: #fff;
-}
-
-/* ----- Top 5 Page Layout ----- */
+/* =========================================================
+   TOP 5 PAGE — NEW COLOR SCHEME & RESPONSIVE BLOCKS
+=========================================================*/
 .top5-entry {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 25px;
+  padding: 25px;
+  margin-bottom: 35px;
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  border: 4px solid #0af;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
 }
 
 .top5-image img {
-  width: 300px;
-  border-radius: 5px;
+  width: 100%;
+  border: 3px solid #0af;
+  box-shadow: 0 0 12px rgba(0, 150, 255, .25);
 }
 
 .top5-text {
-  flex: 1;
+  color: #d6e8ff;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
 }
 
-/* ----- Page Links Section ----- */
-.page-links {
-  text-align: center;
-  margin: 40px 0;
+/* =========================================================
+   RESPONSIVE MOBILE (IMPORTANT)
+=========================================================*/
+
+@media (max-width: 900px) {
+  .hero-row,
+  .headline-grid,
+  .feature-row,
+  .top5-entry {
+    display: block;
+  }
+
+  .hero-row figure,
+  .headline-card,
+  .feature-row,
+  .top5-entry {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  header h1 { font-size: 1.9rem; }
+  .button { font-size: 1rem; padding: 12px 18px; }
 }
