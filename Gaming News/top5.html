@@ -48,7 +48,7 @@
         <h3>2. Resident Evil 4 Remake</h3>
         <p>
           This remake did not simply modernize a classic. It remembered what made it special.
-          The tension, the pacing, the strange humor that somehow never breaks the tone all of it remains,
+          The tension, the pacing, the strange humor—it all remains,
           just sharpened into something more confident. 
           It is a game that turns every encounter into a memory. Every room feels like a story waiting to happen.
           It is rare for a remake to feel like the game you remember rather than the one that existed.
@@ -66,7 +66,7 @@
         <h3>3. Final Fantasy VII Rebirth</h3>
         <p>
           Rebirth feels like returning to a childhood home and finding it both familiar and impossibly new.
-          It takes nostalgia, rewrites it, and still treats it with respect and somehow it works.
+          It takes nostalgia, rewrites it, and still treats it with respect—and somehow it works.
           The characters breathe in ways the original never had room to. 
           The story is bold enough to challenge what fans expect instead of worshipping what came before.
           It is emotional when it needs to be, loud when it chooses to be, and quiet in ways that stick.
@@ -83,7 +83,7 @@
       <article class="top5-text">
         <h3>4. Far Cry 5</h3>
         <p>
-          Far Cry 5 captured something I did not realize I loved chaos as storytelling.
+          Far Cry 5 captured something I did not realize I loved—chaos as storytelling.
           Hope County is beautiful, hostile, unforgettable, and the danger never feels scripted.
           The world does not wait for the player. It erupts, interrupts, forces reactions, and 
           sometimes that chaos creates moments more memorable than any cutscene.
@@ -105,7 +105,7 @@
           When I first played it, I was too young to appreciate the story, but every replay since has given me something new.
           The themes of brotherhood, sacrifice, identity, and courage hit harder now than they ever did then. 
           The gameplay still feels sharp, still feels fast, still feels like Halo. 
-          Even today it stands tall, not as a relic, but as proof that some things age like steel rather than rust.
+          Even today it stands tall—proof that some things age like steel rather than rust.
         </p>
       </article>
     </section>
@@ -113,9 +113,11 @@
     <section class="page-links">
       <a class="button" href="index.html">Back to Home Page</a>
       <a class="button" href="battlefield6.html">Go to Battlefield 6 Review</a>
-    
-      <div class="popup button" onclick="myFunction()">Share this List
-      <span class="popuptext" id="myPopup">Check out my Top 5 Games!</span>
+
+      <!-- NEW POPUP SYSTEM -->
+      <div class="popup-wrapper">
+        <button class="button popup-trigger" onclick="togglePopup()">Share this List</button>
+        <span class="popuptext" id="myPopup">Check out my Top 5 Games!</span>
       </div>
     </section>
 
@@ -125,6 +127,14 @@
     <p>&copy; 2025 Voidborn Gaming</p>
     <a href="site-plan.html">View Site Plan</a>
   </footer>
+
+  <!-- POPUP JAVASCRIPT -->
+  <script>
+    function togglePopup() {
+      const popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
