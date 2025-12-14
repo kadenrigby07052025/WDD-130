@@ -1,4 +1,24 @@
 /* =========================================================
+   GOOGLE FONTS
+=========================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* =========================================================
+   DESIGN SYSTEM VARIABLES
+=========================================================*/
+:root {
+  /* Colors */
+  --primary-color: #0D1321;
+  --secondary-color: #F3F3F3;
+  --accent1-color: #00CC99;
+  --accent2-color: #cecb39;
+
+  /* Typography */
+  --heading-font: 'Oswald', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+/* =========================================================
    GLOBAL STYLE + RESET 
 =========================================================*/
 * {
@@ -8,59 +28,76 @@
 }
 
 body {
-  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
   line-height: 1.7;
-  background: #121212;
-  color: #e3e3e3;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   max-width: 1200px;
   margin: auto;
   padding: 20px;
 }
 
 /* =========================================================
+   TYPOGRAPHY RULES
+=========================================================*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  letter-spacing: 1px;
+}
+
+p, li, td, th, span, a {
+  font-family: var(--body-font);
+}
+
+/* =========================================================
    HEADER + FOOTER
 =========================================================*/
 header {
-  background: #181818;
+  background: #12182a;
   padding: 25px;
   text-align: center;
-  border-bottom: 3px solid #353535;
+  border-bottom: 3px solid var(--accent1-color);
 }
 
 header h1 {
   font-size: 2.5rem;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
 }
 
 footer {
-  background: #181818;
-  color: #aaa;
+  background: #12182a;
+  color: #bfc3cf;
   padding: 25px;
   text-align: center;
   margin-top: 40px;
-  border-top: 3px solid #353535;
+  border-top: 3px solid var(--accent1-color);
 }
 
 footer a {
-  color: #66aaff;
+  color: var(--accent1-color);
   text-decoration: none;
 }
 footer a:hover { text-decoration: underline; }
 
-/* BUTTONS */
+/* =========================================================
+   BUTTONS
+=========================================================*/
 .button {
   display: inline-block;
   padding: 14px 22px;
-  background: #2980ff;
-  color: #fff;
+  background: var(--accent1-color);
+  color: var(--primary-color);
   text-decoration: none;
   border-radius: 6px;
-  font-weight: bold;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: 1px;
   transition: background .3s, transform .2s;
 }
+
 .button:hover {
-  background: #1468d4;
+  background: var(--accent2-color);
   transform: scale(1.05);
 }
 
@@ -76,7 +113,7 @@ footer a:hover { text-decoration: underline; }
 
 .hero-row figure {
   width: 32%;
-  background: #1a1a1a;
+  background: #161c2e;
   padding: 10px;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
@@ -86,31 +123,34 @@ footer a:hover { text-decoration: underline; }
 .hero-row img { width: 100%; border-radius: 6px; }
 
 .headline-section {
-  background: #1b1b1b;
+  background: #161c2e;
   padding: 30px;
   border-radius: 6px;
   margin-bottom: 35px;
   box-shadow: 0 0 12px rgba(0,0,0,0.35);
 }
+
 .headline-section h2 {
-  color: #71b7ff;
+  color: var(--accent1-color);
   margin-bottom: 10px;
   font-size: 1.6rem;
 }
+
 .headline-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 20px;
 }
+
 .headline-card {
-  background: #232323;
+  background: #1b2238;
   padding: 20px;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0,0,0,0.35);
   transition: background .3s;
 }
-.headline-card:hover { background: #2e2e2e; }
+.headline-card:hover { background: #222a45; }
 
 /* =========================================================
    BATTLEFIELD 6 REVIEW PAGE
@@ -125,41 +165,51 @@ footer a:hover { text-decoration: underline; }
 
 .feature-image img {
   width: 100%;
-  border: 3px solid #000;
+  border: 3px solid var(--accent1-color);
 }
 
 .feature-text {
-  background: #ffffff;
-  color: #111;
+  background: var(--secondary-color);
+  color: var(--primary-color);
   padding: 25px;
-  border: 3px solid #000;
-  font-size: 1.2rem;
+  border: 3px solid var(--accent1-color);
+  font-size: 1.15rem;
 }
 
 /* Retailers Block */
 .retailers {
-  background: #fff;
-  color: #111;
+  background: var(--secondary-color);
+  color: var(--primary-color);
   margin-top: 35px;
   padding: 25px;
   text-align: center;
-  font-size: 1.3rem;
-  border: 3px solid #000;
+  font-size: 1.25rem;
+  border: 3px solid var(--accent2-color);
 }
 
 table {
   width: 100%;
-  background: #fff;
+  background: var(--secondary-color);
   border-collapse: collapse;
   margin-top: 20px;
   border-radius: 6px;
   overflow: hidden;
 }
-th, td { padding: 14px; border: 1px solid #333; }
-th { background: #2980ff; color: #fff; }
+
+th, td {
+  padding: 14px;
+  border: 1px solid #bbb;
+}
+
+th {
+  background: var(--accent1-color);
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  letter-spacing: 1px;
+}
 
 /* =========================================================
-   TOP 5 PAGE — NEW COLOR SCHEME & RESPONSIVE BLOCKS
+   TOP 5 PAGE — FEATURE BLOCKS
 =========================================================*/
 .top5-entry {
   display: grid;
@@ -167,58 +217,52 @@ th { background: #2980ff; color: #fff; }
   gap: 25px;
   padding: 25px;
   margin-bottom: 35px;
-  background: linear-gradient(135deg, #1e1e1e, #292929);
-  border: 4px solid #0af;
-  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+  background: linear-gradient(135deg, #161c2e, #0d1321);
+  border: 4px solid var(--accent2-color);
+  box-shadow: 0 0 20px rgba(206, 203, 57, 0.35);
 }
 
 .top5-image img {
   width: 100%;
-  border: 3px solid #0af;
-  box-shadow: 0 0 12px rgba(0, 150, 255, .25);
+  border: 3px solid var(--accent2-color);
+  box-shadow: 0 0 12px rgba(206, 203, 57, 0.35);
 }
 
 .top5-text {
-  color: #d6e8ff;
+  color: var(--secondary-color);
   font-size: 1.2rem;
   line-height: 1.7rem;
 }
 
 /* =========================================================
-   NEON POPUP SYSTEM (UPDATED)
+   POPUP SYSTEM
 =========================================================*/
-
 .popup-wrapper {
   position: relative;
   display: inline-block;
   margin-left: 10px;
 }
 
-.popup-trigger {
-  position: relative;
-  z-index: 3;
-}
-
 .popuptext {
   visibility: hidden;
   opacity: 0;
-
   position: absolute;
   bottom: 130%;
   left: 50%;
   transform: translateX(-50%) scale(0.8);
 
-  background: #0a0f24;
-  color: #6dccff;
+  background: var(--primary-color);
+  color: var(--accent1-color);
   padding: 12px 18px;
   border-radius: 8px;
-  border: 2px solid #0af;
+  border: 2px solid var(--accent1-color);
 
   white-space: nowrap;
   text-align: center;
   font-size: 1rem;
+  font-family: var(--body-font);
 
-  box-shadow: 0 0 16px rgba(0, 170, 255, 0.45);
+  box-shadow: 0 0 16px rgba(0, 204, 153, 0.45);
   transition: opacity .3s ease, transform .3s ease;
 }
 
@@ -228,10 +272,9 @@ th { background: #2980ff; color: #fff; }
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-
   border-width: 8px;
   border-style: solid;
-  border-color: #0af transparent transparent transparent;
+  border-color: var(--accent1-color) transparent transparent transparent;
 }
 
 .popuptext.show {
